@@ -1,3 +1,3 @@
 # Security-Project
-In the current repository, implementation of  two ciphers , Affine Cipher, Playfair Cipher..
-Initial project upload
+In the current repository, implementation of  two ciphers , Affine Cipher, Playfair Cipher..,
+The project have been programmed using Python, and implemented using tkinter library. The user expected to interact with the Affine Cipher window to enter the plaintext and key values to do operation on the plaintext. By choosing one of the operations buttons (radio button), function will be called to do either encryption or decryption. Because there is a condition the keys have to satisfy, there is a function called check, whenever the button (Do the operation) clicked, the function will be called to check whether the greatest common divisor is one or not. In case of the condition did not satisfy, warning dialog will be display. The program built to support simplicity and usability. The user can use it several times and the result will change frequently.
