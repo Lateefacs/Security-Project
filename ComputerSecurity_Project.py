@@ -1,6 +1,8 @@
 import math
 import tkinter as tk
 from tkinter.messagebox import showinfo
+from tkinter import messagebox
+
 
 def egcd(a, b):
     x,y, u,v = 0,1, 1,0
@@ -11,6 +13,7 @@ def egcd(a, b):
     gcd = b
     return gcd, x, y
 
+# modular inverse function
 def modinv(a, m=26):
     gcd, x, y = egcd(a, m)
     if gcd != 1:
@@ -37,7 +40,7 @@ def Encryption(a, b, plaintext):
     # combain the letters in string variable
     final_cyphirtext = ''.join(cyphirtext)
     text4.insert('end', final_cyphirtext)
-    print(final_cyphirtext)
+    #print(final_cyphirtext)
 
 def Decryption(a, b, cyphertext):
     i=0
@@ -57,14 +60,14 @@ def Decryption(a, b, cyphertext):
 
         i += 1
     final_plaintext = ''.join(plaintext)
-    print(final_plaintext)
+    #print(final_plaintext)
     text4.insert('1.0', final_plaintext)
 
 def check():
     a = int(a_in.get())
     b = int(b_in.get())
     text = text1.get('1.0','end')
-    #text4.set('')
+    text4.delete(1.0, tk.END)
     if math.gcd(a, 26) == 1:
         if(selected.get() == 'En'):
             #print(str(text))
@@ -73,9 +76,8 @@ def check():
             Decryption(a, b, str(text))
         #break
     else:
-        #print('Not valid key') #Dialog
-        text4.insert('end', 'Sorry, try again.., Not Valid Keys')
-        #tk.messagebox.Message(icon='error', message='Not Valid Keys', title='None')
+        # Display a warning message dialog
+        messagebox.showwarning("Warning", "Unvalid key values!")
     
 
 # define a list of alphabet for reference, each index represent the letter number value
