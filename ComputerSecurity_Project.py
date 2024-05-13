@@ -111,7 +111,7 @@ text3 = tk.Entry(section1, textvariable=b_in)
 text3.pack(pady=10)
 
 #Section2
-field1 = tk.Label(section2, text='Enter the text ', font=("Helvetica", 14),anchor=tk.W)
+field1 = tk.Label(section2, text='Enter The Text ', font=("Helvetica", 14),anchor=tk.W)
 field1.pack()
 text1 = tk.Text(section2, height=3, width=80)
 text1.pack(pady=10)
