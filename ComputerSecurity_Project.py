@@ -85,7 +85,7 @@ letters= ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 
 
 # create window
 window = tk.Tk()
-window.title("Computer Security Project")
+window.title("Affine Cipher")
 # Set geometry(widthxheight)
 window.geometry('850x630')
 
