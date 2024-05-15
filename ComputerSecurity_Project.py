@@ -93,33 +93,34 @@ title = tk.Label(window, text = "Affine Cipher", background='#BFB6D9', foregroun
 title.config(width=200, height=3 )
 title.pack()
 #UI contains several sections
-section1 = tk.LabelFrame(window, text='Keys')
-section2 = tk.LabelFrame(window, text='Text')
+section1 = tk.LabelFrame(window, text='Text')
+section2 = tk.LabelFrame(window, text='Keys')
 section3 = tk.LabelFrame(window, text='Operation')
 
+
 #Section1
-field2 = tk.Label(section1, text='Enter key1 value: ', font=("Helvetica", 12),anchor=tk.W)
-field2.pack()
-a_in = tk.StringVar()
-text2 = tk.Entry(section1, textvariable = a_in)
-text2.pack()
-
-field3 = tk.Label(section1, text='Enter key2 value: ', font=("Helvetica", 12),anchor=tk.W)
-field3.pack()
-b_in = tk.StringVar()
-text3 = tk.Entry(section1, textvariable=b_in)
-text3.pack(pady=10)
-
-#Section2
-field1 = tk.Label(section2, text='Enter The Text ', font=("Helvetica", 14),anchor=tk.W)
+field1 = tk.Label(section1, text='Enter The Text ', font=("Helvetica", 14),anchor=tk.W)
 field1.pack()
-text1 = tk.Text(section2, height=3, width=80)
+text1 = tk.Text(section1, height=3, width=80)
 text1.pack(pady=10)
 
-field4 = tk.Label(section2, text='The Result Text ', font=("Helvetica", 14),anchor=tk.W)
+field4 = tk.Label(section1, text='The Result Text ', font=("Helvetica", 14),anchor=tk.W)
 field4.pack()
-text4 = tk.Text(section2, height=3, width=80)
+text4 = tk.Text(section1, height=3, width=80)
 text4.pack()
+
+#Section2
+field2 = tk.Label(section2, text='Enter key1 value: ', font=("Helvetica", 12),anchor=tk.W)
+field2.pack()
+a_in = tk.StringVar()
+text2 = tk.Entry(section2, textvariable = a_in)
+text2.pack()
+
+field3 = tk.Label(section2, text='Enter key2 value: ', font=("Helvetica", 12),anchor=tk.W)
+field3.pack()
+b_in = tk.StringVar()
+text3 = tk.Entry(section2, textvariable=b_in)
+text3.pack(pady=10)
 
 #Section3
 selected = tk.StringVar()
@@ -129,8 +130,8 @@ selected.set('En')
 r1.pack()
 r2.pack(pady=10)
 
-section2.pack(pady=10)
 section1.pack(pady=10)
+section2.pack(pady=10)
 section3.pack(pady=10)
 
 button = tk.Button(window, text='Do The Operation', width=20, command=check, background="#6488E5", foreground='white')
